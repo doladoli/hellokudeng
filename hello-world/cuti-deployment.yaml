@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: app-cuti
 spec:
   replicas: 6
   selector:
     matchLabels:
-      app: hello-world
+      app: app-cuti
   template:
     metadata:
       labels:
-        app: hello-world
+        app: app-cuti
     spec:
       containers:
-        - name: nginx1
+        - name: nginx
           image: nginx:latest
           ports:
             - containerPort: 80
